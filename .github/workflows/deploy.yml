@@ -4,7 +4,7 @@ on: [workflow_dispatch]
 
 jobs:
   deploy:
-    runs-on: windows
+    runs-on: windows - latest
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
