@@ -7,11 +7,12 @@ jobs:
     runs-on: windows - latest
     steps:
       - name: Git Checkout
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm i
-
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.22.10'
+      - run: npm install
+    
       - name: Build React App
         run: npm run build
         env:
